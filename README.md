@@ -2,10 +2,10 @@
 Build a Pomodoro Timer
 
 # How to run
-You can Detrmine your time for the session and the break by increas or decreas the time then you can run the timer by bressing in start, you can pause it and reset it
+You can Determine the time for the session and the break by increase or decrease the time then you can run the timer by pressing on start and you can pause it or reset it
 
 # What
-this is simple Pomodoro Timer to orgnize the study time or working time 
+This is simple Pomodoro Timer to organize the study time or working time.
 
 # Why
 We make it for a learn purpos 
