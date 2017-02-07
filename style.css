@@ -1,1 +1,15 @@
-style
+body{
+	background-color: skyBlue;
+}
+#minusBreak, #breakMinutes, #plusBreak{
+	display: inline;
+}
+.break{
+	margin-bottom: 50px;
+}
+#minusSession, #sessionMinutes, #plusSession{
+	display: inline;
+}
+#name{
+	cursor: pointer;
+}
