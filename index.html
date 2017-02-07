@@ -1,1 +1,31 @@
-test
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pomodoro-Timer</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<audio src="/home/m_mushtaha/Desktop/Pomodoro-Timer/Sound/alert.mp3" type = "audio/mp3" id="music"></audio>
+</head>
+<body>
+	<h1>Pomodoro-Timer</h1>
+	<div class="timer">
+		<div class="break">
+			<button id="minusBreak">-</button>
+			<p id="breakMinutes">5</p>
+			<button id="plusBreak">+</button>
+		</div>
+
+		<div class="session">
+			<button id="minusSession">-</button>
+			<p id="sessionMinutes">25</p>
+			<button id="plusSession">+</button>
+		</div>
+
+		<div class="clock">
+			<p id="name" onclick="start()"></p>
+			<p id="time"></p>
+		</div>
+	</div>
+<script type="text/javascript" src = "src.js"></script>
+<script type="text/javascript" src = "test.js"></script>
+</body>
+</html>
