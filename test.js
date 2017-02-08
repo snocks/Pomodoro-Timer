@@ -1,46 +1,69 @@
+
 var test = QUnit.test;
+
 test("should return object", function (t) {
-	var a = onLoad();
+	var a = Timer();
 	t.ok(Object.prototype.toString.call(a), "[object Object]", "it\'s return Object")
 });
 
 test("should have count property", function(t){
-	var a = onLoad();
+	var a = Timer();
 	t.ok(a.hasOwnProperty("count"),"it has own property" )
 });
 
-test("should have plusB property", function(t){
-	var a = onLoad();
-	t.ok(a.hasOwnProperty("plusB"),"it has own property" )
-});
-
-test("should have minuesB property", function(t){
-	var a = onLoad();
+test("should have minusB property", function(t){
+	var a = Timer();
 	t.ok(a.hasOwnProperty("minusB"),"it has own property" )
 });
 
-test("should have plusS property", function(t){
-	var a = onLoad();
-	t.ok(a.hasOwnProperty("plusS"),"it has own property" )
+test("should have plusB property", function(t){
+	var a = Timer();
+	t.ok(a.hasOwnProperty("plusB"),"it has own property" )
 });
 
-test("should have minuesS property", function(t){
-	var a = onLoad();
+test("should have minusS property", function(t){
+	var a = Timer();
 	t.ok(a.hasOwnProperty("minusS"),"it has own property" )
 });
 
-test("if count minus minutes or not",function(t){
-	var a = onLoad();
-	t.deepEqual(a.count() == minutes, true, "it\'s minus")
+test("should have plusS property", function(t){
+	var a = Timer();
+	t.ok(a.hasOwnProperty("minusS"),"it has own property" )
 });
 
-test("if plusB minus break time or not",function(t){
-	var a = onLoad();
-	t.deepEqual(a.plusB() == breakTime, true, "it\'s plus")
+test("should have start property", function(t){
+	var a = Timer();
+	t.ok(a.hasOwnProperty("start"),"it has own property" )
 });
 
-test("if plusS minus Session time or not",function(t){
-	var a = onLoad();
-	t.deepEqual(a.plusB() == countTime, true, "it\'s plus")
+test("should have pause property", function(t){
+	var a = Timer();
+	t.ok(a.hasOwnProperty("pause"),"it has own property" )
 });
 
+test("should have reset property", function(t){
+	var a = Timer();
+	t.ok(a.hasOwnProperty("reset"),"it has own property" )
+});
+
+test("check time changed or not",function(t) {
+	var test1 = Timer().count();
+	var test2 = Timer().count();
+	t.deepEqual(test1 !== test2, true, "it\'s Work")
+});
+
+test("check if button start work ", function(t){
+	var a = minutes;
+	var b = Timer().start();
+	console.log(a);
+	console.log(b);
+	t.deepEqual(a !== b , true, "it\'s Work")
+});
+
+test("check if button pause work ", function(t){
+	var c = minutes;
+	var d = Timer().pause();
+	console.log(c);
+	console.log(d);
+	t.deepEqual(c == d , true, "it\'s Work")
+});
