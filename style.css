@@ -1,15 +1,36 @@
 body{
-	background-color: skyBlue;
+	background-color: #ccc;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
 }
-#minusBreak, #breakMinutes, #plusBreak{
+.timer{
+	text-align: center;
 	display: inline;
 }
-.break{
-	margin-bottom: 50px;
+.clock{
+	border: 2px solid black;
+	border-radius: 25%;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	margin: 30px auto;
 }
-#minusSession, #sessionMinutes, #plusSession{
+.clock p {
+	margin-top: 50px;
+}
+button {
+    background-color: #22262B; 
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#minusBreak, #breakMinutes, #plusBreak, #minusSession, #sessionMinutes, #plusSession{
 	display: inline;
-}
-#name{
-	cursor: pointer;
 }
