@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pomodoro-Timer</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<audio src="alert.mp3" type = "audio/mp3" id="music"></audio>
+</head>
+<body onload="onLoad()">
+	<h1>Pomodoro-Timer</h1>
+	<div class="timer">
+		<div class="break">
+			<p>Break Time</p>
+			<button id="minusBreak" onclick="onLoad().minusB()">-</button>
+			<p id="breakMinutes"></p>
+			<button id="plusBreak" onclick="onLoad().plusB()">+</button>
+		</div>
+
+		<div class="session">
+			<p>Session Time</p>
+			<button id="minusSession" onclick="onLoad().minusS()">-</button>
+			<p id="sessionMinutes"></p>
+			<button id="plusSession" onclick="onLoad().plusS()">+</button>
+		</div>
+
+		<div class="clock">
+			<p id="name"></p>
+			<p id="time"></p>
+		</div>
+		<div>
+			<button onclick="onLoad().start()">Start</button>
+			<button onclick="onLoad().pause()">Pause</button>
+			<button onclick="onLoad().reset()">Reset</button>
+		</div>
+	</div>
+<script type="text/javascript" src = "src.js"></script>
+<script type="text/javascript" src = "test.js"></script>
+</body>
+</html>

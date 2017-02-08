@@ -43,3 +43,4 @@ test("if plusS minus Session time or not",function(t){
 	var a = onLoad();
 	t.deepEqual(a.plusB() == countTime, true, "it\'s plus")
 });
+
