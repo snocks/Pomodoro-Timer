@@ -29,3 +29,7 @@ We began in the writing of program inputs and what are the processes that will b
  - test if the main function return an object.
  - test the methods to insure that give the correct output.
   
+ We plan to make a page contain:
+ - two timers  the session & the break timers
+ - start, pause and reset buttons, when we click start the session will  begin, after the session finished, automatically the break          will start, we can pause or resume each timer by click start & pause, after the session finished, the break timer will begin automatically,
+ - plus & minus buttons, so we can to control the time of timers.
