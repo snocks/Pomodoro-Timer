@@ -2,15 +2,14 @@ body{
 	background-color: #ccc;
 	font-size: 24px;
 	font-weight: bold;
-	text-align: center;
 }
 .timer{
 	text-align: center;
-	display: inline;
+	margin-bottom: 100px;
 }
 .clock{
-	border: 2px solid black;
-	border-radius: 25%;
+	border: 4px solid black;
+	border-radius: 50%;
 	width: 200px;
 	height: 200px;
 	text-align: center;
@@ -25,8 +24,6 @@ button {
     color: white;
     padding: 5px 12px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     cursor: pointer;
 }
