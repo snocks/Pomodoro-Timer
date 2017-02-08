@@ -1,22 +1,17 @@
 
 var music = document.getElementById("music");
 var countTime = 25;
-var breakTime = 1;
+var breakTime = 5;
 var seconds = 0;
 var minutes = 25;
 var run = false;
 var counting;
 
-function onLoad() {
-	document.getElementById('name').innerHTML = "Session";
-	minutes = countTime;
-	document.getElementById('time').innerHTML = minutes + ":0" + seconds;
-	document.getElementById("breakMinutes").innerHTML = breakTime;
-	document.getElementById('breakMinutes').innerHTML = breakTime;
-	document.getElementById('sessionMinutes').innerHTML = countTime;
 
+document.getElementById('time').innerHTML = minutes + ":00";
+function Timer() {
 	obj = {
-		count:function () {
+		count: function () {
 			if (minutes == 0 && seconds == 1) {
 				music.play()
 			}
@@ -38,12 +33,14 @@ function onLoad() {
 					minutes--;
 				}
 				seconds--;
-				document.getElementById('time').innerHTML = minutes + ":" + seconds;
 				
 				if (seconds < 10) {
 					document.getElementById('time').innerHTML = minutes + ":0" + seconds;
+				}else{
+					document.getElementById('time').innerHTML = minutes + ":" + seconds;
 				}
 			}
+			return seconds;
 		},
 		minusB: function () {
 		    if(run === false){
@@ -52,6 +49,8 @@ function onLoad() {
 			    	document.getElementById("breakMinutes").innerHTML = breakTime;
 			    	document.getElementById("name").innerHTML = 'Session'; 
 			    	document.getElementById("time").innerHTML = countTime + ":00";
+    		        seconds = 0;
+         			minutes = countTime;
 			   	}
 		    }
   		},
@@ -61,6 +60,8 @@ function onLoad() {
 			    	document.getElementById("breakMinutes").innerHTML = breakTime;
 			    	document.getElementById("name").innerHTML = 'Session'; 
 			    	document.getElementById("time").innerHTML = countTime + ":00";
+    		        seconds = 0;
+         			minutes = countTime;
 		    }
   		},
   		minusS: function () {
@@ -70,6 +71,8 @@ function onLoad() {
 			    	document.getElementById("sessionMinutes").innerHTML = countTime;
 			    	document.getElementById("name").innerHTML = 'Session'; 
 			    	document.getElementById("time").innerHTML = countTime + ":00";
+    		        seconds = 0;
+         			minutes = countTime;
 			   	}
 		    }
   		},
@@ -79,26 +82,30 @@ function onLoad() {
 			    	document.getElementById("sessionMinutes").innerHTML = countTime;
 			    	document.getElementById("name").innerHTML = 'Session'; 
 			    	document.getElementById("time").innerHTML = countTime + ":00";
+    		        seconds = 0;
+         			minutes = countTime;
 		    }
   		},
 		start: function () {
 			if (run === false) {
-				counting = setInterval(onLoad().count, 1000);
+				counting = setInterval(Timer().count, 1000);
 			 	run = true;
 			}
+		 	return countTime;
 		},
 		pause: function () {
 			if (run == true) {
 				clearInterval(counting);
 			 	run = false;
 		 	}
+		 	return minutes;
 		},
 		reset: function () {
 			if (run === false || true) {
 				clearInterval(counting);
 				run = false;
 				countTime = 25;
-				breakTime = 1;
+				breakTime = 5;
 				seconds = 0;
 			   	document.getElementById("breakMinutes").innerHTML = breakTime;
 			   	document.getElementById("sessionMinutes").innerHTML = countTime;
