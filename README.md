@@ -15,14 +15,14 @@ We began in the writing of program inputs and what are the processes that will b
 
 # Project Plan
 
-**1.user stories:**
+**1.user Permissions:**
  - when the user open the website , by default the time will be 25 minutes and break time 5 minutes and the user can change them.
  - when the user click *start* button, timer should start countdown.
  - when the user click *paus* button, timer should stop countdown temporarily.
  - when the user re-click on paus button, timer should continu countdown.
  - when the user click *reset* button, timer should stop count down completly. 
  
-**2.Test stories:**
+**2.Test Steps:**
  - test all the methods are exist.
  - test if the main function return an object.
  - test the methods to insure that give the correct output.
