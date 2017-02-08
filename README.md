@@ -1,6 +1,8 @@
 # Pomodoro-Timer
 Build a Pomodoro Timer
 
+![Image ofTimer](https://scontent-fra3-1.xx.fbcdn.net/v/t34.0-12/16683419_770322053122958_1922983078_n.png?oh=fcb2f0e589984fffadd804a8fb5199ba&oe=589DFE23)
+
 # How to run
 You can Determine the time for the session and the break by increase or decrease the time then you can run the timer by pressing on start and you can pause it or reset it
 
