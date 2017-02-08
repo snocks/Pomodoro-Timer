@@ -46,24 +46,20 @@ test("should have reset property", function(t){
 	t.ok(a.hasOwnProperty("reset"),"it has own property" )
 });
 
-test("check time changed or not",function(t) {
-	var test1 = Timer().count();
-	var test2 = Timer().count();
-	t.deepEqual(test1 !== test2, true, "it\'s Work")
-});
+QUnit.test( " start & pause' methods  work", function( t ) {	
+  var Test1 = t.async();
+  var Test3 = t.async();
+  Timer().start();
+  setTimeout(Timer().pause(),5000);
+  setTimeout(Timer().reset(), 13000);
+  setTimeout(function() {
+    t.deepEqual( (seconds <= 56 ),true,'Timer counts correctly');
+    Test1();
+  }, 3000 );
 
-test("check if button start work ", function(t){
-	var a = minutes;
-	var b = Timer().start();
-	console.log(a);
-	console.log(b);
-	t.deepEqual(a !== b , true, "it\'s Work")
-});
+setTimeout(function() {
+    t.deepEqual( (seconds == 0 ),true,'Second run of paus method');
+    Test3();
+  }, 11000 );
 
-test("check if button pause work ", function(t){
-	var c = minutes;
-	var d = Timer().pause();
-	console.log(c);
-	console.log(d);
-	t.deepEqual(c == d , true, "it\'s Work")
 });
