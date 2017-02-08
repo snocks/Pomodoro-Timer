@@ -8,7 +8,7 @@ You can Determine the time for the session and the break by increase or decrease
 This is simple Pomodoro Timer to organize the study time or working time.
 
 # Why
-We make it for a learn purpos 
+We make it for a learner purpose
 
 # How
 We began in the writing of program inputs and what are the processes that will be implemented and how to get information after completion
