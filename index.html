@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Pomodoro-Timer</title>
+	<link rel="stylesheet" type="text/css" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<audio src="alert.mp3" type = "audio/mp3" id="music"></audio>
 </head>
-<body onload="onLoad()">
-	<h1>Pomodoro-Timer</h1>
+<body onload="Timer()">
+	<h1 style="text-align: center;">Pomodoro-Timer</h1>
 	<div class="timer">
 		<div class="break">
 			<p>Break Time</p>
-			<button id="minusBreak" onclick="onLoad().minusB()">-</button>
-			<p id="breakMinutes"></p>
-			<button id="plusBreak" onclick="onLoad().plusB()">+</button>
+			<button id="minusBreak" onclick="Timer().minusB()">-</button>
+			<p id="breakMinutes">5</p>
+			<button id="plusBreak" onclick="Timer().plusB()">+</button>
 		</div>
 
 		<div class="session">
 			<p>Session Time</p>
-			<button id="minusSession" onclick="onLoad().minusS()">-</button>
-			<p id="sessionMinutes"></p>
-			<button id="plusSession" onclick="onLoad().plusS()">+</button>
+			<button id="minusSession" onclick="Timer().minusS()">-</button>
+			<p id="sessionMinutes">25</p>
+			<button id="plusSession" onclick="Timer().plusS()">+</button>
 		</div>
 
 		<div class="clock">
-			<p id="name"></p>
-			<p id="time"></p>
+			<p id="name">Session</p>
+			<p id="time">25</p>
 		</div>
 		<div>
-			<button onclick="onLoad().start()">Start</button>
-			<button onclick="onLoad().pause()">Pause</button>
-			<button onclick="onLoad().reset()">Reset</button>
+			<button onclick="Timer().start()">Start</button>
+			<button onclick="Timer().pause()">Pause</button>
+			<button onclick="Timer().reset()">Reset</button>
 		</div>
 	</div>
+	<div id="qunit"></div>
+<script type="text/javascript" src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
 <script type="text/javascript" src = "src.js"></script>
 <script type="text/javascript" src = "test.js"></script>
 </body>
