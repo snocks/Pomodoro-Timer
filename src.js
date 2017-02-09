@@ -29,11 +29,11 @@ function Timer() {
 				}
 			}else{
 				if (seconds == 0) {
-					seconds = 60;	
+					seconds = 60;
 					minutes--;
 				}
 				seconds--;
-				
+
 				if (seconds < 10) {
 					document.getElementById('time').innerHTML = minutes + ":0" + seconds;
 				}else{
@@ -47,7 +47,7 @@ function Timer() {
 			    if(breakTime > 1){
 			    	breakTime--;
 			    	document.getElementById("breakMinutes").innerHTML = breakTime;
-			    	document.getElementById("name").innerHTML = 'Session'; 
+			    	document.getElementById("name").innerHTML = 'Session';
 			    	document.getElementById("time").innerHTML = countTime + ":00";
     		        seconds = 0;
          			minutes = countTime;
@@ -58,7 +58,7 @@ function Timer() {
 		    if(run === false){
 			    	breakTime++;
 			    	document.getElementById("breakMinutes").innerHTML = breakTime;
-			    	document.getElementById("name").innerHTML = 'Session'; 
+			    	document.getElementById("name").innerHTML = 'Session';
 			    	document.getElementById("time").innerHTML = countTime + ":00";
     		        seconds = 0;
          			minutes = countTime;
@@ -69,7 +69,7 @@ function Timer() {
 			    if(countTime > 1){
 			    	countTime--;
 			    	document.getElementById("sessionMinutes").innerHTML = countTime;
-			    	document.getElementById("name").innerHTML = 'Session'; 
+			    	document.getElementById("name").innerHTML = 'Session';
 			    	document.getElementById("time").innerHTML = countTime + ":00";
     		        seconds = 0;
          			minutes = countTime;
@@ -80,7 +80,7 @@ function Timer() {
 		    if(run === false){
 			    	countTime++;
 			    	document.getElementById("sessionMinutes").innerHTML = countTime;
-			    	document.getElementById("name").innerHTML = 'Session'; 
+			    	document.getElementById("name").innerHTML = 'Session';
 			    	document.getElementById("time").innerHTML = countTime + ":00";
     		        seconds = 0;
          			minutes = countTime;
@@ -116,8 +116,3 @@ function Timer() {
 	}
 	return obj;
 };
-
-
-
-
-
