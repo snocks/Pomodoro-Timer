@@ -46,7 +46,7 @@ test("should have reset property", function(t){
 	t.ok(a.hasOwnProperty("reset"),"it has own property" )
 });
 
-QUnit.test( " start & pause' methods  work", function( t ) {	
+QUnit.test( " start & pause' methods  work", function( t ) {
   var Test1 = t.async();
   var Test3 = t.async();
   Timer().start();
@@ -58,7 +58,7 @@ QUnit.test( " start & pause' methods  work", function( t ) {
   }, 3000 );
 
 setTimeout(function() {
-    t.deepEqual( (seconds == 0 ),true,'Second run of paus method');
+    t.deepEqual( (seconds == 0 ),true,'Second run of pause method');
     Test3();
   }, 11000 );
 
